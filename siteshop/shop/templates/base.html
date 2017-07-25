@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    
+	<title>{% block title %}Магазин{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'style/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'style/index.css' %}">
+
+	{% block styles %}
+	{% endblock %}
+</head>
+<body>
+	<div class="conteiner-fluid text-center">
+		<div class="row main-conteiner">
+			<div class="row head-block">
+				<div class="col-md-12">
+					<a class="pull-left logo" href="{% url 'index' %}">SHOP</a>
+				</div>
+			</div>
+			<div class="row content">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+
+	{% block javascript %}
+	    <script src="{% static 'js/jquery.js'%}" charset="utf-8"></script>
+		<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+	{% endblock %}	
+</body>
+</html>

@@ -1,0 +1,41 @@
+
+.image-product{
+	background-position: center;
+    background-size: cover;
+	height: 160px;
+}
+
+@media (max-width: 991px){
+	.image-product{
+	    height: 300px;
+	}
+}
+
+.product{
+	padding-top: 25px;
+}
+
+.btn-read-more, .btn-read-more:hover{
+	border: none;
+    color: #c16060;
+}
+
+.name-product, .price-product{
+	height: 20px;
+}
+
+.name-product{
+	font-size: 18px;
+}
+
+.description-product{
+	font-family: "Helvetica Neue Cyr Medium";
+	padding-top: 10px;
+	min-height: 115px;
+	text-overflow: clip;
+    font-size: small;
+}
+
+.btn-read-more{
+	height: 20px;
+}

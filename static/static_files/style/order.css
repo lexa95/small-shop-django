@@ -1,0 +1,76 @@
+.product-image{
+	background-position: center;
+	background-size: cover;
+	height: 150px;
+}
+
+.content{
+	padding-top: 20px;
+}
+
+.line{
+
+}
+
+.product-title{
+	margin: 0px;
+}
+
+.col-line{
+	padding: 0px;
+}
+
+.line{
+	border-top: 3px solid #000;
+	margin-top: 9px;
+	margin-bottom: 30px;
+}
+
+#id_count_product{
+	text-align: center;
+}
+
+.col-create-order{
+	padding-top: 30px;
+}
+
+.btn-submit{
+	margin-top: 30px;
+	border: none;
+	padding: 10px 40px; 
+	background-color: #c16060;
+	color: white;
+    -webkit-transition: background-color 0.5s; /* Safari */
+    transition: background-color 0.5s;
+}
+
+.btn-submit:hover{
+	color: white;
+	background-color: #d45151;
+}
+
+.block-order-form{
+	width: 100%;
+	max-width: 500px;
+}
+
+.input-block > input{
+	width: 100%;
+}
+
+.input-block > select{
+	width: 100%;
+	float: left;
+}
+
+.order-form-item{
+    margin-top: 10px;
+}
+
+.errorlist{
+	padding-left: 0px;
+    font-size: 10px;
+    color: red;
+    text-align: left;
+    margin-bottom: 4px;
+}

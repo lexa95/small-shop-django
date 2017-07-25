@@ -1,0 +1,44 @@
+body{
+	font-family: "Helvetica Neue Cyr Medium";
+}
+
+:focus {
+    outline: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.main-conteiner{
+	max-width: 800px;
+	width: 100%;
+	display: inline-block;
+}
+
+.head-block{
+	background-color: red;
+	height: 50px;
+	background-color: #c16060;
+}
+
+.logo{
+	font-family: "Helvetica Neue Cyr Bold";
+	font-size: 30px;
+	padding: 5px;
+	color: white;
+}
+
+.logo:hover{
+	color: white;
+}
+
+
+.inline{
+	display: inline-block;
+}
+
+.row {
+    margin-right: 0px;
+	margin-left: 0px;
+}

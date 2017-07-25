@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block title %}
+	Товары
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'style/products.css' %}">
+{% endblock %}
+
+{% block content %}
+	{% for product in products %}
+		<div class="row product">
+			<div class="col-md-4">
+				<div class="image-product" style="background-image: url(/media/{{product.photo}});"></div>
+			</div>
+			
+			<div class="col-md-8">
+			<div class="name-product text-left">
+				{{ product.name|upper }}
+			</div>
+			<div class="description-product text-left">
+				{{ product.description|truncatechars:300 }}
+			</div>
+			<div class="price-product text-left">
+				<div class="inline pull-left">
+					СТОИМОСТЬ: {{ product.price}} руб.
+				</div>
+				<div class="inline pull-right">
+					<a href="{% url 'shop:product' slug=product.slug %}" class="btn-read-more">ПОДРОБНЕЕ..</a>
+				</div>
+			</div>
+			</div>
+
+		</div>
+	{% endfor %}
+
+	<div class="pagination">
+		<span class="step-links">
+			{% if products.has_previous %}
+				<a href="?page={{ products.previous_page_number }}">предыдущая</a>
+			{% endif %}
+
+			<span class="current">
+				Стр<span class=""></span> {{ products.number }} из {{ products.paginator.num_pages }}.
+			</span>
+
+			{% if products.has_next %}
+				<a href="?page={{ products.next_page_number }}">следующая</a>
+			{% endif %}
+		</span>
+	</div>
+{% endblock %}
+
+{% block javascript %}
+	
+{% endblock %}

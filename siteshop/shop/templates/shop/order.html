@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block title %}
+	Товары
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'style/order.css' %}">
+{% endblock %}
+
+{% block content %}
+	<form action="." method="post">
+		<div class="col-md-12 col-sm-12">
+			<div class="col-md-3 col-sm-3">
+				<h3 class="product-title">ТОВАР</h3>
+			</div>
+
+			<div class="col-md-3 col-sm-3 hidden-xs"> 
+				название
+			</div>
+
+			<div class="col-md-3 col-sm-3 hidden-xs"> 
+				<label for="{{ form.count_product.id_for_label }}">кол-во.</label>
+			</div>
+			
+			<div class="col-md-3 col-sm-3 hidden-xs">
+				итог
+			</div>
+		</div>
+
+		<div class="col-line col-md-12 col-sm-12">	
+			<hr class="line">	
+		</div>
+
+		<div class="col-md-12 col-sm-12">	
+			<div class="col-md-3 col-sm-3">
+				<div class="product-image" style="background-image: url(/media/{{product.photo}});"></div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				{{product.name}}
+			</div>
+			<div class="col-md-3 col-sm-3">
+				{{ form.count_product.errors }}
+				{{ form.count_product }}
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div id="result-price-product">	</div>
+				<div>
+					<div class="inline" id="price-product">{{product.price}}</div>
+					<div class="inline"> руб. x </div>
+					<div class="inline" id="count-product"></div>	
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-12 col-sm-12 col-create-order text-left">
+			<h3 class="product-title">Оформление заказа</h3>
+		</div>
+
+		<div class="col-line col-md-12 col-sm-12">	
+			<hr class="line">	
+		</div>
+
+		<div class="col-line col-md-12 col-sm-12 text-center">
+			<div class="block-order-form inline">	
+				<div class="row order-form-item">
+					{{ form.name_client.errors }}
+					<div class="col-md-4 col-sm-4 text-left">
+						<label for="{{ form.name_client.id_for_label }}">Имя</label>
+					</div>
+					<div class="col-md-8 col-sm-8 input-block">
+						{{ form.name_client }}
+					</div>
+				</div>
+				<div class="row order-form-item">
+					{{ form.phone_client.errors }}
+					<div class="col-md-4 col-sm-4 text-left">
+						<label for="{{ form.phone_client.id_for_label }}">Телефон</label>
+					</div>
+					<div class="col-md-8 col-sm-8 input-block">
+						{{ form.phone_client }}
+					</div>
+				</div>
+				<div class="row order-form-item">
+					{{ form.adress_client.errors }}
+					<div class="col-md-4 col-sm-4 text-left">
+						<label for="{{ form.adress_client.id_for_label }}">Адрес</label>
+					</div>
+					<div class="col-md-8 col-sm-8 input-block text-left">
+						{{ form.adress_client }}
+					</div>
+				</div>
+				<div class="row order-form-item">
+					{{ form.delivery.errors }}
+					<div class="col-md-4 col-sm-4 text-left">
+						<label for="{{ form.delivery.id_for_label }}">Способ доставки</label>
+					</div>
+					<div class="col-md-8 col-sm-8 input-block">
+							{{ form.delivery }}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% csrf_token %}
+		<button class="btn-submit" type="submit" name="submit" value="submit">ОФОРМИТЬ ЗАКАЗ</button>
+	</form>
+{% endblock %}
+
+{% block javascript %}
+	<script src="{% static 'js/jquery.js' %}">	</script>
+	<script src="{% static 'js/order.js' %}">	</script>
+{% endblock %}

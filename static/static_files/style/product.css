@@ -1,0 +1,35 @@
+.image-product{
+	background-position: center;
+    background-size: cover;
+	height: 400px;
+}
+
+.image-product-col{
+	padding: 20px 0px;
+}
+
+.data-col{
+	padding: 20px 0px 0px 20px;
+}
+
+.name-product{
+	font-size: 24px;
+}
+
+.description-product, .price-product, .order-product{
+	padding-top: 20px;
+}
+
+.btn-order{
+	padding: 10px 40px; 
+	background-color: #c16060;
+	color: white;
+    -webkit-transition: background-color 0.5s; /* Safari */
+    transition: background-color 0.5s;
+}
+
+.btn-order:hover{
+	color: white;
+	background-color: #d45151;
+}
+

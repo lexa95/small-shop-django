@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block title %}
+	{{product.name}}
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'style/product.css' %}">
+{% endblock %}
+
+{% block content %}
+	<div class="image-product-col col-md-6">
+		<div class="image-product" style="background-image: url(/media/{{product.photo}});"></div>
+	</div>
+	<div class="data-col col-md-6">
+		<div class="name-product text-left">
+			{{product.name}}
+		</div>
+
+		<div class="description-product text-left">
+			{{product.description}}
+		</div>
+		<div class="price-product text-left">
+			Стоимость: {{ product.price }} руб.
+		</div>
+
+		<div class="order-product text-left">
+			<a href="{% url 'shop:order' slug=product.slug %}" class="btn-order">ЗАКАЗАТЬ</a>
+		</div>	
+	</div>
+{% endblock %}
+
+{% block javascript %}
+	
+{% endblock %}

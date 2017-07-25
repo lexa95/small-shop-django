@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Helvetica Neue Cyr Roman";
+    src: url("/static/fonts/HelveticaNeueCyr-Roman.otf");
+ }
+@font-face {
+     font-family: "Helvetica Neue Cyr Black";
+     src: url("/static/fonts/HelveticaNeueCyr-Black.otf");
+  }
+
+ @font-face {
+      font-family: "Helvetica Neue Cyr Thin";
+      src: url("/static/fonts/HelveticaNeueCyr-Thin.otf");
+ }
+ @font-face {
+      font-family: "Helvetica Neue Cyr Light";
+      src: url("/static/fonts/HelveticaNeueCyr-Light.otf");
+ }
+ @font-face {
+      font-family: "Helvetica Neue Cyr Medium";
+      src: url("/static/fonts/HelveticaNeueCyr-Medium.otf");
+ }
+
+ @font-face {
+      font-family: "Helvetica Neue Cyr Italic";
+      src: url("/static/fonts/HelveticaNeueCyr-Italic.otf");
+ }
+
+ @font-face {
+      font-family: "Helvetica Neue Cyr Bold";
+      src: url("/static/fonts/HelveticaNeueCyr-Bold.otf");
+   }
